@@ -1,4 +1,6 @@
 
+import java.io.File
+
 import org.apache.spark.{SparkConf, SparkContext}
 
 import scala.collection.mutable.ArrayBuffer
@@ -8,7 +10,7 @@ import scala.util.matching.Regex
 import scala.concurrent.ExecutionContext.Implicits.global
 
 
-object HelloScala {
+object Exercice1 {
 
   var LIEN_MONSTRE_REGEX = "(?<=<li><a href=\").+?(?=\")"
   var LIEN_SPELL_REGEX  ="(?<=\\/spells\\/).+?(?=\")"
@@ -18,15 +20,26 @@ object HelloScala {
   var PATTERN_LIEN_MONSTRE = new Regex(LIEN_SPELL_REGEX)
 
   def main(args: Array[String]): Unit = {
-    crawlMonsters("http://legacy.aonprd.com/bestiary/","monsterIndex.html")
-    crawlMonsters("http://legacy.aonprd.com/bestiary2/","additionalMonsterIndex.html")
-    crawlMonsters("http://legacy.aonprd.com/bestiary3/","monsterIndex.html")
-    crawlMonsters("http://legacy.aonprd.com/bestiary4/","monsterIndex.html")
-    crawlMonsters("http://legacy.aonprd.com/bestiary5/","index.html")
-
     val conf = new SparkConf().setAppName("crawler").setMaster("local[*]")
     val sc = new SparkContext(conf)
-    val rdd = sc.parallelize(creatures)
+
+    if(!new File("results").exists()){
+      crawlMonsters("http://legacy.aonprd.com/bestiary/","monsterIndex.html")
+      crawlMonsters("http://legacy.aonprd.com/bestiary2/","additionalMonsterIndex.html")
+      crawlMonsters("http://legacy.aonprd.com/bestiary3/","monsterIndex.html")
+      crawlMonsters("http://legacy.aonprd.com/bestiary4/","monsterIndex.html")
+      crawlMonsters("http://legacy.aonprd.com/bestiary5/","index.html")
+
+      val rdd = sc.parallelize(creatures)
+      rdd.saveAsObjectFile("results")
+
+    }
+      val rdd = sc.objectFile[Creature]("results")
+      val map = rdd.map(creature=> creature.spells.map(spell=>(spell, creature.name))).flatMap(x=>x).reduceByKey((k,v)=>(k+v))
+
+
+      map.foreach(println)
+
   }
 
   private def crawlMonsters(src : String, index : String) = {
