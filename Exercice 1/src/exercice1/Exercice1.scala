@@ -1,14 +1,12 @@
+package exercice1
 
 import java.io.File
 
 import org.apache.spark.{SparkConf, SparkContext}
 
 import scala.collection.mutable.ArrayBuffer
-import scala.concurrent.Future
 import scala.io.Source
 import scala.util.matching.Regex
-import scala.concurrent.ExecutionContext.Implicits.global
-
 
 object Exercice1 {
 

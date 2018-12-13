@@ -1,3 +1,5 @@
+package exercice1
+
 import scala.collection.mutable.ArrayBuffer
 
 class Creature(val name : String) extends Serializable {
@@ -9,5 +11,4 @@ class Creature(val name : String) extends Serializable {
   }
 
 
-  override def toString = s"Creature()"
 }
