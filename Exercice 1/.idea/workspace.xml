@@ -2,38 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3f501e-11ae-4ce3-90a7-2c14a3e2593d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex2/Util.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercice1/Excercice1Bonus.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercice1/Exercice1.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exercice 2/.idea/hydra.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exercice 2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exercice 2/src/src/Attaque.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exercice 2/src/src/Creature.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exercice 2/src/src/SimpleExample$.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exercice 2/src/src/Simulation1.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exercice 2/src/src/src.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex2/.idea/hydra.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex2/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex2/ex2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex2/src/Attaque.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex2/src/Creature.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex2/src/SimpleExample$.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex2/src/Simulation1.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex2/src/Util$.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex2/Simulateur.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex2/Simulation2.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex2/creatures/AngelSlayer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex2/creatures/AstralDeva.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex2/creatures/Dragon.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex2/creatures/MovanicDeva.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex2/creatures/OrcBarbarian.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex2/creatures/Planetar.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Creature.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Creature.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercice1/Creature.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Excercice1Bonus.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercice1.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice 2/Attaque.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/Attaque.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice 2/Creature.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/Creature.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice 2/SimpleExample.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/SimpleExample.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice 2/Simulation1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/Simulation1.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice 2/Util.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice 2/src/src/Util$.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex2/Creature.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/Creature.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex2/Simulation1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/Simulation1.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,26 +59,35 @@
     <session id="1275442989">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="2" />
-          <entry key="scala" value="6" />
+          <entry key="class" value="2" />
+          <entry key="java" value="3" />
+          <entry key="scala" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
-          <entry key="Scala" value="6" />
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="3" />
+          <entry key="Scala" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="11" />
-          <entry key="scala" value="14" />
+          <entry key="java" value="25" />
+          <entry key="scala" value="9367" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11" />
-          <entry key="Scala" value="14" />
+          <entry key="JAVA" value="25" />
+          <entry key="Scala" value="9367" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -107,77 +95,76 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exercice1/Creature.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Spell.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ex2/Util.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="34">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ex2/Attaque.scala">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ex2/Creature.scala">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ex2/SimpleExample.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="306">
+              <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ex2/Simulateur.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
               <folding>
-                <element signature="e#13#57#0" expanded="true" />
+                <element signature="e#14#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ex2/Simulation1.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-187">
+              <caret line="64" column="25" selection-start-line="64" selection-end-line="65" />
+              <folding>
+                <element signature="e#14#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exercice1/Excercice1Bonus.scala">
+        <entry file="file://$PROJECT_DIR$/src/ex2/Simulation2.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state relative-caret-position="102">
+              <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="5" />
+              <folding>
+                <element signature="e#13#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exercice1/Exercice1.scala">
+        <entry file="file://$PROJECT_DIR$/src/ex2/Creature.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state relative-caret-position="22">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <folding>
+                <element signature="e#13#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ex2/Simulation1.scala">
+        <entry file="file://$PROJECT_DIR$/src/ex2/creatures/Dragon.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="219">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -189,6 +176,7 @@
       <list>
         <option value="Scala Script" />
         <option value="Scala Object" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -198,6 +186,29 @@
       <find>Angel, Astral Deva</find>
       <find>crawlSpell</find>
       <find>fogCloud</find>
+      <find>solar</find>
+      <find>ControlAttaques</find>
+      <find>execute</find>
+      <find>array</find>
+      <find>barba</find>
+      <find>MIN_AXE_Y</find>
+      <find>my</find>
+      <find>Edge</find>
+      <find>loop</find>
+      <find>sendMessages</find>
+      <find>oklm</find>
+      <find>ControlAttaques2</find>
+      <find>id</find>
+      <find>98</find>
+      <find>calculerNroAleatoire</find>
+      <find>return</find>
+      <find>check</find>
+      <find>forea</find>
+      <find>startTime</find>
+      <find>forEa</find>
+      <find>Ennemis :</find>
+      <find>sed</find>
+      <find>forE</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -211,7 +222,6 @@
         <option value="$PROJECT_DIR$/src/Test.scala" />
         <option value="$PROJECT_DIR$/out/Test.scala" />
         <option value="$PROJECT_DIR$/src/HelloScala.scala" />
-        <option value="$PROJECT_DIR$/src/ex2/Simulation1.scala" />
         <option value="$PROJECT_DIR$/src/ex2/Util$.java" />
         <option value="$PROJECT_DIR$/src/ex2/SimpleExample$.java" />
         <option value="$PROJECT_DIR$/src/ex2/Util.scala" />
@@ -221,6 +231,19 @@
         <option value="$PROJECT_DIR$/src/Creature.scala" />
         <option value="$PROJECT_DIR$/src/exercice1/Creature.scala" />
         <option value="$PROJECT_DIR$/src/Spell.scala" />
+        <option value="$PROJECT_DIR$/src/exercice1/Spell.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/Simulateur.java" />
+        <option value="$PROJECT_DIR$/src/ex2/creatures/Planetar.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/creatures/AngelSlayer.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/creatures/AstralDeva.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/creatures/MovanicDeva.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/creatures/OrcBarbarian.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/Attaque.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/creatures/Dragon.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/Simulation2.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/Creature.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/Simulateur.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/Simulation1.scala" />
       </list>
     </option>
   </component>
@@ -234,7 +257,7 @@
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
-    <option name="height" value="969" />
+    <option name="height" value="970" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -242,7 +265,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -262,18 +284,26 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ex2" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Exercice 1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercice 1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ex2" type="462c0819:PsiDirectoryNode" />
+              <item name="creatures" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544714778006" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Exercice 2" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544916321235" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../uqac-bdd-devoir2-master" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -283,6 +313,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\dev\BDD-réparties\devoir 2\bdd-reparties-devoir2\Exercice 1\src\ex2" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ex2.creatures" />
+      <recent name="exercice1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bapti\IdeaProjects\Test\out" />
@@ -300,10 +334,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.exercice1">
+  <component name="RunManager" selected="Application.HelloScala">
     <configuration name="HelloScala" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="ex2.doSimulation" />
       <module name="Exercice 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="doSimulation2" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ex2.doSimulation2" />
+      <module name="Exercice 1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -318,10 +365,12 @@
     <list>
       <item itemvalue="Application.exercice1" />
       <item itemvalue="Application.HelloScala" />
+      <item itemvalue="Application.doSimulation2" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.HelloScala" />
+        <item itemvalue="Application.doSimulation2" />
       </list>
     </recent_temporary>
   </component>
@@ -337,17 +386,19 @@
       <updated>1542117380200</updated>
       <workItem from="1542117384388" duration="1230000" />
       <workItem from="1542719205623" duration="10040000" />
+      <workItem from="1544877073293" duration="12987000" />
+      <workItem from="1544890144567" duration="19029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12270000" />
+    <option name="totallyTimeSpent" value="71654000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23154363" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23825504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -355,8 +406,8 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.47592068" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -385,6 +436,70 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/ex2/Creature.scala</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>ManagementFactory.getThreadMXBean().getThreadCount()</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>java.lang.Thread.activeCount()</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>myGraph.isCheckpointed</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>System.getProperty(&quot;user.dir&quot;)</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>System.getProperty(&quot;java.io.tmpdir&quot;)</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>attaque.calculerDamage</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>source.attaqueCible()</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>attaque.niveauxAttaques(1)</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>attaque.niveauxAttaques(nbLastAttaque)</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Exercice 1.iml">
       <provider selected="true" editor-type-id="text-editor">
@@ -395,50 +510,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/out/Test.scala" />
     <entry file="file://$PROJECT_DIR$/src/HelloScala.scala" />
-    <entry file="file://$PROJECT_DIR$/src/ex2/Attaque.scala">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ex2/Creature.scala">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ex2/Simulation1.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ex2/Util.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ex2/SimpleExample.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding>
-            <element signature="e#13#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercice1/Excercice1Bonus.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercice1/Exercice1.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/exercice1/Creature.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -446,10 +517,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Spell.scala">
+    <entry file="file://$PROJECT_DIR$/src/Spell.scala" />
+    <entry file="file://$PROJECT_DIR$/src/exercice1/Spell.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercice1/Exercice1.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-730">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercice1/Excercice1Bonus.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="24" selection-start-line="58" selection-end-line="59" />
+          <folding>
+            <element signature="e#19#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/spark/spark-2.3.2-bin-hadoop2.7/jars/spark-graphx_2.11-2.3.2.jar!/org/apache/spark/graphx/EdgeContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/SimpleExample.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="102" selection-start-line="19" selection-start-column="89" selection-end-line="19" selection-end-column="102" />
+          <folding>
+            <element signature="e#13#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/creatures/AngelSlayer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/creatures/AstralDeva.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/creatures/MovanicDeva.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/creatures/OrcBarbarian.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/creatures/Planetar.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/spark/spark-2.3.2-bin-hadoop2.7/jars/spark-core_2.11-2.3.2.jar!/org/apache/spark/scheduler/ShuffleMapTask.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/Util.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/creatures/Dragon.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/Attaque.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/Simulateur.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+          <folding>
+            <element signature="e#14#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/Creature.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#13#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/Simulation2.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="e#13#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/Simulation1.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="64" column="25" selection-start-line="64" selection-end-line="65" />
+          <folding>
+            <element signature="e#14#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -506,7 +715,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Test</last-edited>
+          <last-edited>Exercice 1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
