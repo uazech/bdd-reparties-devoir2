@@ -19,7 +19,7 @@ object doSimulation2 extends App {
 
 
   val sc = new SparkContext(conf)
-  sc.setCheckpointDir(System.getProperty("user.dir"))
+  sc.setCheckpointDir(System.getProperty("user.dir")+"\\out")
 
 
   sc.setLogLevel("WARN")

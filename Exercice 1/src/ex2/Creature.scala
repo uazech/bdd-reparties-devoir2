@@ -62,7 +62,7 @@ class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var re
           penetrationArmure = attaque.niveauxAttaques.last._2 -cible.ac
         }
         else{
-          penetrationArmure = attaque.niveauxAttaques(nbLastAttaque)*2+attaque.calculerDamage() - cible.ac
+          penetrationArmure = attaque.niveauxAttaques(nbLastAttaque)+attaque.calculerDamage() - cible.ac
         }
         if(penetrationArmure<0){
           return 0

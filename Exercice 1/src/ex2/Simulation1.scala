@@ -18,7 +18,7 @@ object doSimulation extends App {
     .setMaster("local[*]")
   val sc = new SparkContext(conf)
   sc.setLogLevel("ERROR")
-  sc.setCheckpointDir(System.getProperty("user.dir"))
+  sc.setCheckpointDir(System.getProperty("user.dir")+"\\out")
 
 
   //<---------------Solar------------------->
@@ -74,6 +74,10 @@ object doSimulation extends App {
     5, 20)
   setAttaque = List( throwingaxe, viciousFlail) // priority, attaque
   var brutalWarlord = new Creature("brutal Warlord", 2, 27, 141, 0, 110, 47, true, setAttaque, 30)
+  solar.id=1
+  worgRider.id=2
+  doubleaxe.id=3
+  brutalWarlord.id=4
   var myVertices = sc.makeRDD(Array(
     (1L, solar),
     (2L, worgRider),
