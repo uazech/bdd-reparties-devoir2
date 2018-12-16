@@ -14,8 +14,8 @@ object doSimulation2 extends App {
 
 
   val conf = new SparkConf()
-    .setAppName("Simulation 1")
-    .setMaster("local")
+    .setAppName("Simulation 2")
+    .setMaster("local[*]")
 
 
   val sc = new SparkContext(conf)
@@ -68,7 +68,9 @@ object doSimulation2 extends App {
   arrayCreature+=((10,c))
 
   // Team 2 :
-  c = new Dragon(false, true)
+  c = new Dragon
+  c.isEnVol=false
+  c.isDeguise=true
   c.id=11
   arrayCreature+=((11, c))
   for(i<-12 to 22){
@@ -87,6 +89,7 @@ object doSimulation2 extends App {
 //  println(arrayCreature.size)
   for(i<-1 to arrayCreature.length){
     for(j<-i+1 to arrayCreature.length){
+//        println(i+" - "+j)
         val amiOuEnnemi = if(arrayCreature(i-1)._2.equipe == arrayCreature(j-1)._2.equipe) 1F else 2F
         relationsArray+=Edge(arrayCreature(i-1)._1.toLong, arrayCreature(j-1)._1.toLong, amiOuEnnemi)
     }

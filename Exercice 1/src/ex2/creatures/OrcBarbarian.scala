@@ -18,4 +18,14 @@ class OrcBarbarian() extends Creature(
 
 ),30){
 
+  override def attaqueCible(): Int = {
+    if(Util.calculerNroAleatoire(0,20) == 20){ // Si le dés vaut 20, alors on attaque sans se poser la question de l'armure
+      return attaque.calculerDamage()
+    }
+    super.attaqueCible()
+  }
+
+
+
+
 }

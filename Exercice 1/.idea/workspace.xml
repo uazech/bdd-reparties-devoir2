@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0d3f501e-11ae-4ce3-90a7-2c14a3e2593d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/ex2/Creature.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/Creature.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex2/Simulateur.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/Simulateur.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex2/Simulation2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/Simulation2.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex2/creatures/Dragon.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/creatures/Dragon.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex2/creatures/OrcBarbarian.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/creatures/OrcBarbarian.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,26 +55,28 @@
         <counts>
           <entry key="class" value="2" />
           <entry key="java" value="3" />
-          <entry key="scala" value="54" />
+          <entry key="png" value="2" />
+          <entry key="scala" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
+          <entry key="Image" value="2" />
           <entry key="JAVA" value="3" />
-          <entry key="Scala" value="54" />
+          <entry key="Scala" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="25" />
-          <entry key="scala" value="9367" />
+          <entry key="scala" value="10553" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="25" />
-          <entry key="Scala" value="9367" />
+          <entry key="Scala" value="10553" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -102,13 +108,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ex2/Simulateur.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+            <state relative-caret-position="289">
+              <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
               <folding>
-                <element signature="e#14#30#0" expanded="true" />
+                <element signature="e#14#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ex2/Simulation1.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="64" column="25" selection-start-line="64" selection-end-line="65" />
+            <state relative-caret-position="183">
+              <caret line="20" column="60" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="60" />
               <folding>
                 <element signature="e#14#46#0" expanded="true" />
               </folding>
@@ -129,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ex2/Simulation2.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="5" />
+            <state>
+              <caret line="69" column="13" lean-forward="true" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
               <folding>
                 <element signature="e#13#35#0" expanded="true" />
               </folding>
@@ -138,11 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ex2/Creature.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="64" column="68" selection-start-line="64" selection-start-column="68" selection-end-line="64" selection-end-column="68" />
+            <state relative-caret-position="140">
+              <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
               <folding>
                 <element signature="e#13#54#0" expanded="true" />
               </folding>
@@ -151,10 +157,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ex2/creatures/OrcBarbarian.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ex2/creatures/Dragon.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="183">
+              <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -197,8 +212,10 @@
       <find>startTime</find>
       <find>forEa</find>
       <find>Ennemis :</find>
-      <find>sed</find>
       <find>forE</find>
+      <find>sed</find>
+      <find>Solar</find>
+      <find>sort</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -227,13 +244,13 @@
         <option value="$PROJECT_DIR$/src/ex2/creatures/AngelSlayer.scala" />
         <option value="$PROJECT_DIR$/src/ex2/creatures/AstralDeva.scala" />
         <option value="$PROJECT_DIR$/src/ex2/creatures/MovanicDeva.scala" />
-        <option value="$PROJECT_DIR$/src/ex2/creatures/OrcBarbarian.scala" />
         <option value="$PROJECT_DIR$/src/ex2/Attaque.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/Simulation1.scala" />
         <option value="$PROJECT_DIR$/src/ex2/creatures/Dragon.scala" />
         <option value="$PROJECT_DIR$/src/ex2/Simulation2.scala" />
-        <option value="$PROJECT_DIR$/src/ex2/Simulateur.scala" />
-        <option value="$PROJECT_DIR$/src/ex2/Simulation1.scala" />
         <option value="$PROJECT_DIR$/src/ex2/Creature.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/creatures/OrcBarbarian.scala" />
+        <option value="$PROJECT_DIR$/src/ex2/Simulateur.scala" />
       </list>
     </option>
   </component>
@@ -266,6 +283,16 @@
             <path>
               <item name="Exercice 1" type="b2602c69:ProjectViewProjectNode" />
               <item name="Exercice 1" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercice 1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercice 1" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercice 1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercice 1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -291,7 +318,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544917159668" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544972807536" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../uqac-bdd-devoir2-master" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -324,7 +351,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HelloScala">
+  <component name="RunManager" selected="Application.doSimulation2">
     <configuration name="HelloScala" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="ex2.doSimulation" />
       <module name="Exercice 1" />
@@ -359,8 +386,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloScala" />
         <item itemvalue="Application.doSimulation2" />
+        <item itemvalue="Application.HelloScala" />
       </list>
     </recent_temporary>
   </component>
@@ -377,12 +404,12 @@
       <workItem from="1542117384388" duration="1230000" />
       <workItem from="1542719205623" duration="10040000" />
       <workItem from="1544877073293" duration="12987000" />
-      <workItem from="1544890144567" duration="19594000" />
+      <workItem from="1544890144567" duration="26620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72219000" />
+    <option name="totallyTimeSpent" value="79245000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -431,7 +458,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/ex2/Creature.scala</url>
-          <line>53</line>
+          <line>60</line>
           <properties />
           <option name="timeStamp" value="74" />
         </line-breakpoint>
@@ -570,13 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ex2/creatures/OrcBarbarian.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ex2/creatures/Planetar.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -591,6 +611,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/Attaque.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ex2/Util.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -600,54 +627,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ex2/creatures/Dragon.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ex2/Attaque.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ex2/Simulateur.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
-          <folding>
-            <element signature="e#14#30#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="183">
+          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ex2/Simulation2.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="5" />
+        <state>
+          <caret line="69" column="13" lean-forward="true" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
           <folding>
             <element signature="e#13#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/Creature.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+          <folding>
+            <element signature="e#13#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/creatures/OrcBarbarian.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ex2/Simulation1.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="64" column="25" selection-start-line="64" selection-end-line="65" />
+        <state relative-caret-position="183">
+          <caret line="20" column="60" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="60" />
           <folding>
             <element signature="e#14#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ex2/Creature.scala">
+    <entry file="file://$PROJECT_DIR$/out/drawing.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/Simulateur.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="64" column="68" selection-start-line="64" selection-start-column="68" selection-end-line="64" selection-end-column="68" />
+        <state relative-caret-position="289">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
           <folding>
-            <element signature="e#13#54#0" expanded="true" />
+            <element signature="e#14#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

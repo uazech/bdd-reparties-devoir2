@@ -1,6 +1,9 @@
 package ex2
 
 
+import java.awt.Color
+import java.awt.geom.Ellipse2D
+import java.awt.image.BufferedImage
 import java.io._
 import java.lang.management.ManagementFactory
 import java.util.Date
@@ -10,6 +13,7 @@ import org.apache.spark.graphx._
 import org.json4s.DefaultFormats
 
 import scala.collection.mutable.ListBuffer
+import scala.reflect.ClassTag
 
 
 
@@ -44,7 +48,7 @@ class Simulateur() extends Serializable {
   }
 
   def mergeAttaques(attaque1: Int, attaque2: Int): Int = {
-    attaque1 + attaque2
+    (attaque1 + attaque2)
   }
 
   def mergeEnnemisMessage(result: List[Creature], ennemi: List[Creature]): List[Creature] = {
@@ -53,7 +57,8 @@ class Simulateur() extends Serializable {
 
   def joinEnnemisMessages(vid: VertexId, source: Creature, ennemis:  List[Creature]): Creature = {
 
-    source.listEnnemis = ennemis.sortBy((ennemi) => ennemi.distanceEntre(source.x, source.y, ennemi.x, ennemi.y))
+    source.listEnnemis = ennemis.sortBy((ennemi) => ennemi.distanceEntre(source.x, source.y, ennemi.x, ennemi.y)) // On trie par rapport à la distance
+      .filter(creature=>(!creature.isDeguise)) // On ne prend pas en compte les créatures déguisées
 
     source.seDeplacer()
 
@@ -74,6 +79,7 @@ class Simulateur() extends Serializable {
     result.listEnnemis=source.listEnnemis
     result
   }
+
 
 
 
@@ -114,7 +120,6 @@ class Simulateur() extends Serializable {
 
 
         // On gère les attaques
-
         val messagesAttaques = myGraph.aggregateMessages[ Int](
           sendAttaqueMessage,
           mergeAttaques,
@@ -126,7 +131,7 @@ class Simulateur() extends Serializable {
 
 
 
-        // On gère les demandes et réponses de Heal
+        // On gère les demandes et réponses de Heal (Requiert la liste des alliés
         // TODO
 
         // On supprime les créatures mortes
@@ -141,10 +146,10 @@ class Simulateur() extends Serializable {
 
       }
     }
-    loop1
+//    loop1
     myGraph
-
-
   }
+
+
 }
 

@@ -14,12 +14,18 @@ class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var re
   var cible:Creature=null
   var lastAttaque = -1
   var nbLastAttaque =0
+  var isEnVol:Boolean=false
+  var isDeguise:Boolean=false
+  var attaque:Attaque=null
+
+  var numStrategie = 1
 
   override def toString = s" $nom ac $ac hp $hp "
 
   def recevoirAttaques(degats: Int) ={
     this.hp-=degats
   }
+
 
 
   /**
@@ -50,6 +56,7 @@ class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var re
     var i=1
     attaques.foreach { attaque: Attaque =>
       if(distance<=attaque.distanceAttaqueMax && distance>=attaque.distanceAttaqueMin) {
+        this.attaque=attaque
         if (i == lastAttaque) {
           nbLastAttaque += 1
         }
@@ -71,6 +78,8 @@ class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var re
       }
       i += 1
     }
+
+
 
 
     return 0
@@ -101,6 +110,9 @@ class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var re
     * @return la distance entre les deux points
     */
   def distanceEntre(x1:Double, y1:Double, x2:Double,y2:Double): Double ={
+    if(cible != null && cible.isEnVol)
+      return Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2)) + 20 // Si la cible vole, on retourne la distance, plus 20 (attaquable seulement à distance
+
     return Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2))
 
   }
