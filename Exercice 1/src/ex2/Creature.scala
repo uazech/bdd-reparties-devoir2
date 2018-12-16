@@ -4,7 +4,7 @@ import scala.collection.immutable.ListMap
 import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 
 
-class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var regeneration:Int,
+class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var regeneration:Int, var maxHP:Int,
                var x:Double, var y:Double, var vivant: Boolean = true, var attaques: List[Attaque],val deplacement:Int) extends Serializable {
 
 
@@ -17,6 +17,7 @@ class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var re
   var isEnVol:Boolean=false
   var isDeguise:Boolean=false
   var attaque:Attaque=null
+
 
   var numStrategie = 1
 
@@ -115,5 +116,24 @@ class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var re
 
     return Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2))
 
+  }
+
+  def cloner():Creature={
+    val result = new Creature(this.nom, this.equipe, this.ac, this.hp, this.regeneration, this.maxHP,
+    this.x, this.y, this.vivant, this.attaques,this.deplacement)
+    result.cible=this.cible
+    result.id=this.id
+    result.listEnnemis=this.listEnnemis
+    return result
+  }
+
+  def seRegenerer()={
+    val newHP = hp + regeneration
+    if(newHP>maxHP){
+      hp=maxHP
+    }
+    else{
+      hp=newHP
+    }
   }
 }

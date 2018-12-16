@@ -8,6 +8,7 @@ class Dragon() extends Creature(
   39,
   449,
   0,
+  449,
   Util.calculerNroAleatoire(0,100), Util.calculerNroAleatoire(0,100),
   true,
   List(new Attaque("Melee bite", Map(1->25), Map("numInf" -> 2, "numMax" -> 8, "constant" -> 15), 0, 2)

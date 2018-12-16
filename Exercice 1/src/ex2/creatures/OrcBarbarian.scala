@@ -8,6 +8,7 @@ class OrcBarbarian() extends Creature(
   15,
   42,
   0,
+  442,
   Util.calculerNroAleatoire(0,100), Util.calculerNroAleatoire(0,100),
   true,
   List(new Attaque("greataxe", Map(1->11), Map("numInf" -> 1, "numMax" -> 12, "constant" -> 10), 0, 2)

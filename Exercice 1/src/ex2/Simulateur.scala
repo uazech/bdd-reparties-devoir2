@@ -20,21 +20,31 @@ import scala.reflect.ClassTag
 class Simulateur() extends Serializable {
 
 
+  /**
+    * Envoie un message indiquant un ennemi aux créatures
+    * @param ctx
+    */
   def sendEnnemisMessage(ctx: EdgeContext[Creature, Float, List[Creature]]): Unit = {
     val source = ctx.srcAttr
     val destination = ctx.dstAttr
     val relation = ctx.attr
     if(relation==2){ // 2 = ennemis
-      source.listEnnemis=null // On reset les ennemis pour ne pas prendre trop de place
+      source.listEnnemis=null // On reset les informations inutiles pour ne pas prendre trop de place
       source.cible=null
+      source.attaque=null
       destination.listEnnemis=null
       destination.cible=null
+      destination.attaque=null
       ctx.sendToSrc(List(destination))
       ctx.sendToDst(List(source))
     }
 
   }
 
+  /**
+    * Envoi un message d'attaque à un ennemi (creature.cible)
+    * @param ctx
+    */
   def sendAttaqueMessage(ctx: EdgeContext[Creature, Float, Int]): Unit = {
     val source = ctx.srcAttr
     val destination = ctx.dstAttr
@@ -47,36 +57,56 @@ class Simulateur() extends Serializable {
     return
   }
 
+  /**
+    * Merge les attaques des créatures
+    * @param attaque1 la première attaque
+    * @param attaque2 la deuxième attaque
+    * @return la somme des deux attaques (les dégats infligés)
+    */
   def mergeAttaques(attaque1: Int, attaque2: Int): Int = {
     (attaque1 + attaque2)
   }
 
-  def mergeEnnemisMessage(result: List[Creature], ennemi: List[Creature]): List[Creature] = {
-    result:::ennemi
+  /**
+    * Merge deux listes de messages indiquant les ennemis
+    * @param liste1
+    * @param liste2
+    * @return une nouvelle liste, mergée
+    */
+  def mergeEnnemisMessage(liste1: List[Creature], liste2: List[Creature]): List[Creature] = {
+    liste1:::liste2
   }
 
+  /**
+    * Joint les messages indiquants les ennemis
+    * Remplis la liste des ennemis de la créature
+    * Déplace la créature vers l'ennemi le plus proche
+    * @param vid : l'identifiant du vertex
+    * @param source : la créature qu'on souhaite traiter
+    * @param ennemis : les ennemis à remplir
+    * @return une nouvelle créature identique à la source, qui s'est déplacée vers l'ennemi le plus proche
+    */
   def joinEnnemisMessages(vid: VertexId, source: Creature, ennemis:  List[Creature]): Creature = {
-
     source.listEnnemis = ennemis.sortBy((ennemi) => ennemi.distanceEntre(source.x, source.y, ennemi.x, ennemi.y)) // On trie par rapport à la distance
       .filter(creature=>(!creature.isDeguise)) // On ne prend pas en compte les créatures déguisées
-
     source.seDeplacer()
 
-    val result = new Creature(source.nom, source.equipe, source.ac, source.hp, source.regeneration,
-      source.x, source.y, source.vivant, source.attaques,source.deplacement)
-    result.cible=source.cible
-    result.id=source.id
-    result.listEnnemis=source.listEnnemis
+    val result = source.cloner()
     result
   }
 
+  /**
+    * Fait en sorte que la créature prend les dégats en paramètre
+    * Gère aussi la regénération de la créature
+    * @param vid : l'id du vertex
+    * @param source : la creature qui prend des dégats
+    * @param degats : les dégats à infliger
+    * @return une nouvelle créature identique à la première, qui a perdu degats hp, et qui s'est regnérée
+    */
   def joinAttaquesMessages(vid: VertexId, source: Creature, degats:  Int): Creature = {
     source.hp-=degats
-    val result = new Creature(source.nom, source.equipe, source.ac, source.hp, source.regeneration,
-      source.x, source.y, source.vivant, source.attaques,source.deplacement)
-    result.cible=source.cible
-    result.id=source.id
-    result.listEnnemis=source.listEnnemis
+    source.seRegenerer()
+    val result = source.cloner()
     result
   }
 
@@ -97,8 +127,6 @@ class Simulateur() extends Serializable {
         counter += 1
         if (counter == maxIterations) return
 
-        // On gère les regénérations
-        //TODO
 
         // On gère les ennemis
         val messagesEnnemis = myGraph.aggregateMessages[ List[Creature]](
@@ -146,7 +174,7 @@ class Simulateur() extends Serializable {
 
       }
     }
-//    loop1
+    loop1
     myGraph
   }
 

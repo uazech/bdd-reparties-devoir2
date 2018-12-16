@@ -8,6 +8,7 @@ class MovanicDeva() extends Creature(
   24,
   126,
   0,
+  126,
   Util.calculerNroAleatoire(150,200), Util.calculerNroAleatoire(150,200),
   true,
   List(new Attaque("Greatsword", Map(1->17, 2->12,3->7), Map("numInf" -> 2, "numMax" -> 6, "constant" -> 9), 0, 2)

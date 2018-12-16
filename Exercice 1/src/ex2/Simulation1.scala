@@ -31,7 +31,7 @@ object doSimulation extends App {
   var longBow = new Attaque("composite longbow", attaque, damage,
     98, 500)
   var setAttaque = List(longBow,  greatSword) // priority, attaque
-  var solar = new Creature("Solar", 1, 44, 363, 15, 15, 1, true, setAttaque, 50)
+  var solar = new Creature("Solar", 1, 44, 363, 15, 363,15, 1, true, setAttaque, 50)
 
 
   //<---------------worg rider------------------->
@@ -44,7 +44,7 @@ object doSimulation extends App {
   var shortbow = new Attaque("shortbow", attaque, damage,
     5, 10)
   setAttaque = List( shortbow, battleaxe) // priority, attaque
-  var worgRider = new Creature("Orc worg rider", 2, 18, 13, 0, 100, 50, true, setAttaque, 20)
+  var worgRider = new Creature("Orc worg rider", 2, 18, 13, 0, 13,100, 50, true, setAttaque, 20)
 
   //<---------------double axe------------------->
   attaque = Map(1 -> 19, 2 -> 14, 3 -> 9)
@@ -60,7 +60,7 @@ object doSimulation extends App {
   var longbow = new Attaque("orc double axe", attaque, damage,
     5, 20)
   setAttaque = List(doubleaxe1,  doubleaxe2, shortbow) // priority, attaque
-  var doubleaxe = new Creature("double axe fury", 2, 17, 142, 0, 80, 30, true, setAttaque, 40)
+  var doubleaxe = new Creature("double axe fury", 2, 17, 142, 0, 142, 80, 30, true, setAttaque, 40)
 
   //<---------------brutal warlord------------------->
 
@@ -73,7 +73,7 @@ object doSimulation extends App {
   var throwingaxe = new Attaque(" throwing axe ", attaque, damage,
     5, 20)
   setAttaque = List( throwingaxe, viciousFlail) // priority, attaque
-  var brutalWarlord = new Creature("brutal Warlord", 2, 27, 141, 0, 110, 47, true, setAttaque, 30)
+  var brutalWarlord = new Creature("brutal Warlord", 2, 27, 141, 0, 141, 110, 47, true, setAttaque, 30)
   solar.id=1
   worgRider.id=2
   doubleaxe.id=3

@@ -34,7 +34,7 @@ object doSimulation2 extends App {
   var longBow = new Attaque("composite longbow", attaque, damage,
     98, 500)
   var setAttaque = List(longBow, greatSword) // priority, attaque
-  var solar = new Creature("Solar", 1, 44, 363, 15, 15, 1, true, setAttaque, 50)
+  var solar = new Creature("Solar", 1, 44, 363, 15, 363, 15, 1, true, setAttaque, 50)
 
   // Team 1
   solar.id=1

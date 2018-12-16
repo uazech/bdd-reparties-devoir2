@@ -8,6 +8,7 @@ class AngelSlayer() extends Creature(
   26,
   112,
   0,
+  112,
   Util.calculerNroAleatoire(150,200), Util.calculerNroAleatoire(150,200),
   true,
   List(new Attaque("double axe", Map(1->21, 2->16,3->11), Map("numInf" -> 1, "numMax" -> 8, "constant" -> 7), 0, 2),
