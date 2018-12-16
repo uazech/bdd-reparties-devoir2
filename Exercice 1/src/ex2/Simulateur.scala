@@ -103,12 +103,18 @@ class Simulateur() extends Serializable {
     * @param degats : les dégats à infliger
     * @return une nouvelle créature identique à la première, qui a perdu degats hp, et qui s'est regnérée
     */
-  def joinAttaquesMessages(vid: VertexId, source: Creature, degats:  Int): Creature = {
-    source.hp-=degats
+  def joinAttaquesMessages(vid: VertexId, source: Creature, degats: Int): Creature = {
+    if (degats >= source.ac) {
+      source.ac = 0
+      source.hp -= (degats - source.ac) // calcule la portion de hp
+    }
+    else
+      source.ac -= degats
     source.seRegenerer()
     val result = source.cloner()
     result
   }
+
 
 
 
@@ -163,7 +169,7 @@ class Simulateur() extends Serializable {
         // TODO
 
         // On supprime les créatures mortes
-        myGraph = myGraph.subgraph(vpred = (id, creature) =>  creature.hp > 0)
+        myGraph = myGraph.subgraph(vpred = (id, creature) =>  creature.hp >= 0)
 
 
           myGraph.checkpoint()

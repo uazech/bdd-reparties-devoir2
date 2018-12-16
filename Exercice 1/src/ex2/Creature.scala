@@ -66,26 +66,26 @@ class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var re
         }
         lastAttaque = i
         var penetrationArmure = 0
+        var calculAttaque=0
         if(nbLastAttaque >= attaque.niveauxAttaques.size) {
-          penetrationArmure = attaque.niveauxAttaques.last._2 -cible.ac
+          calculAttaque=attaque.calculerAttaque(attaque.niveauxAttaques.last._2)
+          penetrationArmure = cible.ac-calculAttaque
         }
         else{
-          penetrationArmure = attaque.niveauxAttaques(nbLastAttaque)+attaque.calculerDamage() - cible.ac
+          calculAttaque=attaque.calculerAttaque(nbLastAttaque)
+          penetrationArmure = cible.ac-calculAttaque
         }
-        if(penetrationArmure<0){
-          return 0
+        if(penetrationArmure<=0){
+          return cible.ac+attaque.calculerDamage // on retourne la portion de ac restant plus le damage
         }
-        return attaque.calculerDamage
+        else
+          return calculAttaque
       }
       i += 1
     }
-
-
-
-
     return 0
-
   }
+
 
   /**
     * Calcule la direction entre deux points
