@@ -198,13 +198,13 @@ class Creature(var nom : String, var equipe:Int, var ac: Int, var hp:Int, var re
 
   def seRegenerer()={
     val newHP = hp + regeneration
-    if(newHP>maxHP){
-      hp=maxHP
-    }
-    else{
-      hp=newHP
+    if(hp<=0 && regeneration>0 ){
+      hp=30 //bonus par regeneration
+      ac=30 //bonus par regeneration
+      regeneration-=1 //1 regeneration mois
     }
   }
+
 
   def reset() ={
     this.listAmis=null
