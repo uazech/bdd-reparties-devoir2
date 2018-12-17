@@ -16,6 +16,8 @@ class Planetar() extends Creature(
 
 
 
+
   ),30){
+  this.regeneration=15
 
 }

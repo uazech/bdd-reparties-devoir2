@@ -125,6 +125,7 @@ class Simulateur() extends Serializable {
       .filter(creature=>(!creature.isDeguise)) // On ne prend pas en compte les créatures déguisées
     source.seDeplacer
     source.identifierCibleHeal // On identifie la cible du heal
+    source.seRegenerer()
     val result = source.cloner()
     return result
   }
@@ -158,7 +159,7 @@ class Simulateur() extends Serializable {
     }
     else
       source.ac -= degats
-    source.seRegenerer()
+
     val result = source.cloner()
     result
   }

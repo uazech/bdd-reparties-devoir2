@@ -35,7 +35,7 @@ object doSimulation2 extends App {
     98, 500)
   var setAttaque = List(longBow, greatSword) // priority, attaque
   var solar = new Creature("Solar", 1, 44, 363, 15, 363, 15, 1, true, setAttaque, 50)
-
+  solar.regeneration=15
   // Team 1
   solar.id=1
   arrayCreature+=((1, solar))
@@ -69,8 +69,6 @@ object doSimulation2 extends App {
 
   // Team 2 :
   val dragon = new Dragon
-  dragon.isEnVol=false
-  dragon.isDeguise=true
   dragon.id=11
   arrayCreature+=((11, dragon))
   for(i<-12 to 22){

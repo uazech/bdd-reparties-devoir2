@@ -22,6 +22,8 @@ class Dragon() extends Creature(
 
 
   ),40){
+  this.isDeguise=true
+  this.isEnVol=false
 
 
   @Override override def seDeplacer(): Unit = {
@@ -34,7 +36,7 @@ class Dragon() extends Creature(
       case Some(solar) =>
         this.cible = solar
       case None =>
-        this.cible = listEnnemis(0)
+        this.cible = listEnnemis(1) // Pour ne pas réattaquer le Solar
 
     }
     if(this.cible.nom=="Solar" && (Math.abs(this.x)-Math.abs(cible.x)<cible.deplacement) && (Math.abs(this.x)-Math.abs(cible.x)<cible.deplacement)){
