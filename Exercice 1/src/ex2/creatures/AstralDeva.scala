@@ -18,5 +18,6 @@ class AstralDeva() extends Creature(
 
 
   ),40){
+  this.heal=50
 
 }

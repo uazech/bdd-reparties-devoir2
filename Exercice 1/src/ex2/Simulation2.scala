@@ -36,6 +36,7 @@ object doSimulation2 extends App {
   var setAttaque = List(longBow, greatSword) // priority, attaque
   var solar = new Creature("Solar", 1, 44, 363, 15, 363, 15, 1, true, setAttaque, 50)
   solar.regeneration=15
+  solar.heal=50
   // Team 1
   solar.id=1
   arrayCreature+=((1, solar))

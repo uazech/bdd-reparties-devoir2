@@ -41,6 +41,7 @@ class Creature(var nom : String, var equipe:Int, var ac: Int, var hp:Int, var re
           continue=false
         }
         compteur+=1
+        if(compteur==listAmis.length) continue=false
 
       }
     }

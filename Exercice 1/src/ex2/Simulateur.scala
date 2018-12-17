@@ -250,9 +250,9 @@ class Simulateur() extends Serializable {
           mergeHeal,
           fields
         )
-//        myGraph = myGraph.joinVertices(messagesHeal)(
-//          (vid, sommet, bestId) => joinHealMessages(vid, sommet, bestId)
-//        )
+        myGraph = myGraph.joinVertices(messagesHeal)(
+          (vid, sommet, bestId) => joinHealMessages(vid, sommet, bestId)
+        )
 
         // On supprime les créatures mortes
         myGraph = myGraph.subgraph(vpred = (id, creature) =>  creature.hp > 0)
