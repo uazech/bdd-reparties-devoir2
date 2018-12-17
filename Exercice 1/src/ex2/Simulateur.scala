@@ -201,14 +201,14 @@ class Simulateur() extends Serializable {
         if (counter == maxIterations) return
 
         // On gère les amis
-//        val messagesAmis = myGraph.aggregateMessages[ List[Creature]](
-//          sendAmisMessage,
-//          mergeAmisEtEnnemisMessage,
-//          fields
-//        )
-//        myGraph = myGraph.joinVertices(messagesAmis)(
-//          (vid, sommet, bestId) => joinAmissMessages(vid, sommet, bestId)
-//        )
+        val messagesAmis = myGraph.aggregateMessages[ List[Creature]](
+          sendAmisMessage,
+          mergeAmisEtEnnemisMessage,
+          fields
+        )
+        myGraph = myGraph.joinVertices(messagesAmis)(
+          (vid, sommet, bestId) => joinAmissMessages(vid, sommet, bestId)
+        )
 
 
         // On gère les ennemis
