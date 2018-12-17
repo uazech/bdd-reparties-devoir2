@@ -1,9 +1,8 @@
 package ex2
 
-
 import org.apache.spark.graphx._
 import org.apache.spark.{SparkConf, SparkContext}
-
+import ex2.creatures._
 
 object doSimulation extends App {
   val MIN_AXE_X = 0
@@ -18,10 +17,10 @@ object doSimulation extends App {
     .setMaster("local[*]")
   val sc = new SparkContext(conf)
   sc.setLogLevel("ERROR")
-  sc.setCheckpointDir(System.getProperty("user.dir")+"\\out")
+  sc.setCheckpointDir(System.getProperty("user.dir") + "\\out")
 
 
-  //<---------------Solar------------------->
+  //<---------------Solar (1)------------------->
   var attaque = Map(1 -> 35, 2 -> 30, 3 -> 25, 4 -> 20)
   var damage = Map("numInf" -> 3, "numMax" -> 6, "constant" -> 18)
   var greatSword = new Attaque("dancing greatSword", attaque, damage,
@@ -30,39 +29,12 @@ object doSimulation extends App {
   damage = Map("numInf" -> 2, "numMax" -> 6, "constant" -> 14)
   var longBow = new Attaque("composite longbow", attaque, damage,
     98, 500)
-  var setAttaque = List(longBow,  greatSword) // priority, attaque
-  var solar = new Creature("Solar", 1, 44, 363, 15, 363,15, 1, true, setAttaque, 50)
+  var setAttaque = List(longBow, greatSword) // priority, attaque
+  var solar = new Creature("Solar", 1, 44, 363, 15, 363, Util.calculerNroAleatoire(0, 100), Util.calculerNroAleatoire(0, 100), true, setAttaque, 50)
+  solar.color = (216, 245, 29)
 
 
-  //<---------------worg rider------------------->
-  attaque = Map(1 -> 6)
-  damage = Map("numInf" -> 1, "numMax" -> 8, "constant" -> 2)
-  var battleaxe = new Attaque("battleaxe", attaque, damage,
-    0, 10)
-  attaque = Map(1 -> 4)
-  damage = Map("numInf" -> 1, "numMax" -> 6, "constant" -> 0)
-  var shortbow = new Attaque("shortbow", attaque, damage,
-    5, 10)
-  setAttaque = List( shortbow, battleaxe) // priority, attaque
-  var worgRider = new Creature("Orc worg rider", 2, 18, 13, 0, 13,100, 50, true, setAttaque, 20)
-
-  //<---------------double axe------------------->
-  attaque = Map(1 -> 19, 2 -> 14, 3 -> 9)
-  damage = Map("numInf" -> 1, "numMax" -> 8, "constant" -> 10)
-  var doubleaxe1 = new Attaque("orc double axe", attaque, damage,
-    0, 10)
-  attaque = Map(1 -> 17, 2 -> 12, 3 -> 7)
-  damage = Map("numInf" -> 1, "numMax" -> 8, "constant" -> 7)
-  var doubleaxe2 = new Attaque("orc double axe", attaque, damage,
-    5, 10)
-  attaque = Map(1 -> 16, 2 -> 11, 3 -> 6)
-  damage = Map("numInf" -> 1, "numMax" -> 8, "constant" -> 6)
-  var longbow = new Attaque("orc double axe", attaque, damage,
-    5, 20)
-  setAttaque = List(doubleaxe1,  doubleaxe2, shortbow) // priority, attaque
-  var doubleaxe = new Creature("double axe fury", 2, 17, 142, 0, 142, 80, 30, true, setAttaque, 40)
-
-  //<---------------brutal warlord------------------->
+  //<---------------brutal warlord (1)------------------->
 
   attaque = Map(1 -> 20, 2 -> 15, 3 -> 10)
   damage = Map("numInf" -> 1, "numMax" -> 8, "constant" -> 10)
@@ -72,21 +44,67 @@ object doSimulation extends App {
   damage = Map("numInf" -> 1, "numMax" -> 6, "constant" -> 5)
   var throwingaxe = new Attaque(" throwing axe ", attaque, damage,
     5, 20)
-  setAttaque = List( throwingaxe, viciousFlail) // priority, attaque
-  var brutalWarlord = new Creature("brutal Warlord", 2, 27, 141, 0, 141, 110, 47, true, setAttaque, 30)
-  solar.id=1
-  worgRider.id=2
-  doubleaxe.id=3
-  brutalWarlord.id=4
+  setAttaque = List(throwingaxe, viciousFlail) // priority, attaque
+  var brutalWarlord = new Creature("brutal Warlord", 2, 27, 141, 0, 141, Util.calculerNroAleatoire(0, 100), Util.calculerNroAleatoire(0, 100), true, setAttaque, 30)
+  brutalWarlord.color = (124, 14, 120)
+
+
+  //<---------------Worgs Rider (9)------------------->
+
+  var worgsRider1 = new WorgsRider()
+  var worgsRider2 = new WorgsRider()
+  var worgsRider3 = new WorgsRider()
+  var worgsRider4 = new WorgsRider()
+  var worgsRider5 = new WorgsRider()
+  var worgsRider6 = new WorgsRider()
+  var worgsRider7 = new WorgsRider()
+  var worgsRider8 = new WorgsRider()
+  var worgsRider9 = new WorgsRider()
+
+  //<---------------Worgs Rider (4)------------------->
+
+  var BarbaresOrc1 = new BarbaresOrc()
+  var BarbaresOrc2 = new BarbaresOrc()
+  var BarbaresOrc3 = new BarbaresOrc()
+  var BarbaresOrc4 = new BarbaresOrc()
+
+
+  solar.id = 1
+  brutalWarlord.id = 2
+  worgsRider1.id = 3
+  worgsRider2.id = 4
+  worgsRider3.id = 5
+  worgsRider4.id = 6
+  worgsRider5.id = 7
+  worgsRider8.id = 8
+  worgsRider9.id = 9
+  BarbaresOrc1.id = 10
+  BarbaresOrc2.id = 11
+  BarbaresOrc3.id = 12
+  BarbaresOrc4.id = 13
+
+
   var myVertices = sc.makeRDD(Array(
     (1L, solar),
-    (2L, worgRider),
-    (3L, doubleaxe),
-    (4L, brutalWarlord)
+    (2L, brutalWarlord),
+    (3L, worgsRider1),
+    (4L, worgsRider2),
+    (5L, worgsRider3),
+    (6L, worgsRider4),
+    (7L, worgsRider5),
+    (8L, worgsRider6),
+    (9L, worgsRider8),
+    (10L, worgsRider9),
+    (11L, BarbaresOrc1),
+    (12L, BarbaresOrc2),
+    (13L, BarbaresOrc3),
+    (14L, BarbaresOrc4)
+
   ))
 
   var myEdges = sc.makeRDD(Array(
-    Edge(1L, 2L, 2F), Edge(1L, 3L, 2F), Edge(1L, 4L, 2F), Edge(2L, 1L, 2F)
+    Edge(1L, 2L, 2F), Edge(1L, 3L, 2F), Edge(1L, 4L, 2F), Edge(1L, 5L, 2F), Edge(1L, 6L, 2F), Edge(1L, 7L, 2F), Edge(1L, 8L, 2F)
+    , Edge(1L, 9L, 2F), Edge(1L, 10L, 2F), Edge(1L, 11L, 2F), Edge(1L, 12L, 2F), Edge(1L, 13L, 2F), Edge(1L, 14L, 2F)
   ))
 
   var myGraph = Graph(myVertices, myEdges)

@@ -19,6 +19,6 @@ class Planetar() extends Creature(
   ),30){
   this.regeneration=15
   this.heal=50
-
+  this.color=(43,245,29)
 
 }

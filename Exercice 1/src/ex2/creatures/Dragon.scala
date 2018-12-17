@@ -24,7 +24,7 @@ class Dragon() extends Creature(
   ),40){
   this.isDeguise=true
   this.isEnVol=false
-
+  this.color=(243,12,43)
 
   @Override override def seDeplacer(): Unit = {
 

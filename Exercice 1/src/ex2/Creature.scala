@@ -22,6 +22,7 @@ class Creature(var nom : String, var equipe:Int, var ac: Int, var hp:Int, var re
   var attaque:Attaque=null
   var heal = 0
   var healCible:Creature=null
+  var color = (0, 0, 0)
 
   var numStrategie = 1
 
@@ -170,6 +171,7 @@ class Creature(var nom : String, var equipe:Int, var ac: Int, var hp:Int, var re
           this.x, this.y, this.vivant, this.attaques,this.deplacement)
     }
     result.nom=this.nom
+    result.color = this.color
     result.equipe=this.equipe
     result.ac=this.ac
     result.hp=this.hp

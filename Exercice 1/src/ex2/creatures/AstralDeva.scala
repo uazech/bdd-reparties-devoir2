@@ -19,5 +19,5 @@ class AstralDeva() extends Creature(
 
   ),40){
   this.heal=50
-
+  this.color=(22,212,233)
 }

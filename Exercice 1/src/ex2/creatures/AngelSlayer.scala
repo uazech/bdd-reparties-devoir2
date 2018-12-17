@@ -20,6 +20,6 @@ class AngelSlayer() extends Creature(
 
 ),40){
   this.heal=50
-
+  this.color=(233,22,114)
 
 }

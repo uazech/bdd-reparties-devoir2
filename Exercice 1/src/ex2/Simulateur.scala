@@ -191,13 +191,16 @@ class Simulateur() extends Serializable {
     var myGraph = g
     var counter = 0
     val fields = new TripletFields(true, true, true) //join strategy
-
+    Util.makeFolder(sc.appName.filterNot(_ == ' '))
 
     def loop1: Unit = {
       while (true) {
 
         println("ITERATION NUMERO : " + (counter + 1))
-
+        var draw =new DrawImage(sc.appName)
+        draw.init()
+        draw.vertices=myGraph.vertices.collect()
+        draw.draw(counter + 1)
         counter += 1
         if (counter == maxIterations) return
 
