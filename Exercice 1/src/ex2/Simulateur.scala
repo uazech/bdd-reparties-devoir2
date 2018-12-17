@@ -224,8 +224,7 @@ class Simulateur() extends Serializable {
           return // S'il n'y a pas d'ennemis, on peut arrêter le programme
         }
 
-        myGraph.vertices.foreach(arg=>
-          println(arg._2))
+        println(myGraph.vertices.count())
 
         myGraph = myGraph.joinVertices(messagesEnnemis)(
           (vid, sommet, bestId) => joinEnnemisMessages(vid, sommet, bestId)

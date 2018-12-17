@@ -56,10 +56,8 @@ class Creature(var nom : String, var equipe:Int, var ac: Int, var hp:Int, var re
   def seDeplacer(){
 
     val listEnnemisProche = Random.shuffle(listEnnemis.filter(ennemi=> distanceEntre(this.x, this.y, ennemi.x, ennemi.y)==0))
-    if(listEnnemisProche.length>0)
-      this.cible=listEnnemisProche(0) // Pour éviter les collisions d'attaque, on prend un monstre proche au hasard
-    else
-      this.cible=listEnnemis(0) // On se déplace vers le plus proche
+
+    this.cible=listEnnemis(0) // On se déplace vers le plus proche
     val distanceInitiale = distanceEntre(this.x, this.y, cible.x, cible.y)
     val direction = calculerDirection(this.x, this.y, cible.x, cible.y)
     val distanceApresMouvement = distanceEntre(0, 0, direction._1 * deplacement, direction._2 * deplacement)
