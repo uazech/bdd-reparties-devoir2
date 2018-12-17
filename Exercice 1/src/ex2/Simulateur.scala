@@ -1,19 +1,10 @@
 package ex2
 
 
-import java.awt.Color
-import java.awt.geom.Ellipse2D
-import java.awt.image.BufferedImage
 import java.io._
-import java.lang.management.ManagementFactory
-import java.util.Date
 
 import org.apache.spark.SparkContext
 import org.apache.spark.graphx._
-import org.json4s.DefaultFormats
-
-import scala.collection.mutable.ListBuffer
-import scala.reflect.ClassTag
 
 
 
@@ -29,17 +20,50 @@ class Simulateur() extends Serializable {
     val destination = ctx.dstAttr
     val relation = ctx.attr
     if(relation==2){ // 2 = ennemis
-      source.listEnnemis=null // On reset les informations inutiles pour ne pas prendre trop de place
-      source.cible=null
-      source.attaque=null
-      destination.listEnnemis=null
-      destination.cible=null
-      destination.attaque=null
+      source.reset // On reset les informations inutiles à envoyer
+      destination.reset
       ctx.sendToSrc(List(destination))
       ctx.sendToDst(List(source))
     }
-
   }
+
+  /**
+    * Envoie un message indiquant un ami aux créatures
+    * @param ctx
+    */
+  def sendAmisMessage(ctx: EdgeContext[Creature, Float, List[Creature]]): Unit = {
+    val source = ctx.srcAttr
+    val destination = ctx.dstAttr
+    val relation = ctx.attr
+    if(relation==1){ // 1 = amis
+      source.reset // On reset les informations inutiles à envoyer
+      destination.reset
+      ctx.sendToSrc(List(destination))
+      ctx.sendToDst(List(source))
+    }
+  }
+
+  /**
+    * Envoie un message indiquant les heals à effectuer.
+    * @param ctx
+    */
+  def sendHealMessage(ctx: EdgeContext[Creature, Float, (Boolean, Int)]): Unit = {
+    val source = ctx.srcAttr
+    val destination = ctx.dstAttr
+    val relation = ctx.attr
+    if(relation==1){ // 1 = amis
+      if(source.healCible!=null){
+        ctx.sendToSrc(true, 0)
+        ctx.sendToDst(false, source.heal)
+      }
+      if(destination.healCible!=null){
+        ctx.sendToDst(true, 0)
+        ctx.sendToSrc(false, source.heal)
+      }
+    }
+  }
+
+
 
   /**
     * Envoi un message d'attaque à un ennemi (creature.cible)
@@ -54,7 +78,6 @@ class Simulateur() extends Serializable {
     else if (destination.cible.id == source.id){
       ctx.sendToSrc(source.attaqueCible())
     }
-    return
   }
 
   /**
@@ -64,17 +87,28 @@ class Simulateur() extends Serializable {
     * @return la somme des deux attaques (les dégats infligés)
     */
   def mergeAttaques(attaque1: Int, attaque2: Int): Int = {
-    (attaque1 + attaque2)
+    return (attaque1 + attaque2)
   }
 
   /**
-    * Merge deux listes de messages indiquant les ennemis
+    * Merge deux listes de messages indiquant les ennemis ou les amis
     * @param liste1
     * @param liste2
     * @return une nouvelle liste, mergée
     */
-  def mergeEnnemisMessage(liste1: List[Creature], liste2: List[Creature]): List[Creature] = {
+  def mergeAmisEtEnnemisMessage(liste1: List[Creature], liste2: List[Creature]): List[Creature] = {
     liste1:::liste2
+  }
+
+  /**
+    * Merge les messages de heal
+    * @param msg1 : Le premier message de heal
+    * @param msg2 : Le second message de heal
+    * @return : tuple._1 : true = on supprime le heal, false = on heal.
+    *         tuple._2 = la valeur du heal à effectuer
+    */
+  def mergeHeal(msg1: (Boolean, Int), msg2: (Boolean, Int)): (Boolean, Int) = {
+    return (msg1._1||msg2._1, msg1._2+msg2._2) // Deux false = false => on heal, Un false et un true = true => on supprime le heal
   }
 
   /**
@@ -89,10 +123,24 @@ class Simulateur() extends Serializable {
   def joinEnnemisMessages(vid: VertexId, source: Creature, ennemis:  List[Creature]): Creature = {
     source.listEnnemis = ennemis.sortBy((ennemi) => ennemi.distanceEntre(source.x, source.y, ennemi.x, ennemi.y)) // On trie par rapport à la distance
       .filter(creature=>(!creature.isDeguise)) // On ne prend pas en compte les créatures déguisées
-    source.seDeplacer()
-
+    source.seDeplacer
+    source.identifierCibleHeal // On identifie la cible du heal
     val result = source.cloner()
-    result
+    return result
+  }
+
+  /**
+    * Joint les messages indiquants les amis
+    * Remplis la liste des amis de la créature
+    * @param vid : l'identifiant du vertex
+    * @param source : la créature qu'on souhaite traiter
+    * @param amis : les ennemis à remplir
+    * @return une nouvelle créature identique à la source, qui s'est déplacée vers l'ennemi le plus proche
+    */
+  def joinAmissMessages(vid: VertexId, source: Creature, amis:  List[Creature]): Creature = {
+    source.listAmis = amis.sortBy((ennemi) => ennemi.distanceEntre(source.x, source.y, ennemi.x, ennemi.y)) // On trie par rapport à la distance
+    val result = source.cloner()
+    return result
   }
 
   /**
@@ -115,6 +163,25 @@ class Simulateur() extends Serializable {
     result
   }
 
+  /**
+    * Joint les messages de heal
+    * Supprime le heal si un heal a été effectué
+    * Ajoute la valeur du heal aux HP
+    * @param vid l'identifiant du vertex
+    * @param source la créature à modifier
+    * @param tuple _1 : true si on doit supprimer le heal
+    *              _2 : la valeur du heal à recevoir
+    * @return
+    */
+  def joinHealMessages(vid: VertexId, source: Creature, tuple: (Boolean, Int)): Creature = {
+    if(tuple._1){ // On supprime le heal
+      source.heal=0
+    }
+    source.recevoirHeal(tuple._2)
+    val result = source.cloner()
+    result
+  }
+
 
 
 
@@ -133,11 +200,21 @@ class Simulateur() extends Serializable {
         counter += 1
         if (counter == maxIterations) return
 
+        // On gère les amis
+//        val messagesAmis = myGraph.aggregateMessages[ List[Creature]](
+//          sendAmisMessage,
+//          mergeAmisEtEnnemisMessage,
+//          fields
+//        )
+//        myGraph = myGraph.joinVertices(messagesAmis)(
+//          (vid, sommet, bestId) => joinAmissMessages(vid, sommet, bestId)
+//        )
+
 
         // On gère les ennemis
         val messagesEnnemis = myGraph.aggregateMessages[ List[Creature]](
           sendEnnemisMessage,
-          mergeEnnemisMessage,
+          mergeAmisEtEnnemisMessage,
           fields
         )
 
@@ -146,7 +223,8 @@ class Simulateur() extends Serializable {
           return // S'il n'y a pas d'ennemis, on peut arrêter le programme
         }
 
-        myGraph.vertices.foreach(arg=>println(arg._2))
+        myGraph.vertices.foreach(arg=>
+          println(arg._2))
 
         myGraph = myGraph.joinVertices(messagesEnnemis)(
           (vid, sommet, bestId) => joinEnnemisMessages(vid, sommet, bestId)
@@ -165,12 +243,18 @@ class Simulateur() extends Serializable {
 
 
 
-        // On gère les demandes et réponses de Heal (Requiert la liste des alliés
-        // TODO
+        // On gère les demandes et réponses de Heal
+        val messagesHeal = myGraph.aggregateMessages[ (Boolean, Int)](
+          sendHealMessage,
+          mergeHeal,
+          fields
+        )
+//        myGraph = myGraph.joinVertices(messagesHeal)(
+//          (vid, sommet, bestId) => joinHealMessages(vid, sommet, bestId)
+//        )
 
         // On supprime les créatures mortes
-        myGraph = myGraph.subgraph(vpred = (id, creature) =>  creature.hp >= 0)
-
+        myGraph = myGraph.subgraph(vpred = (id, creature) =>  creature.hp > 0)
 
           myGraph.checkpoint()
 

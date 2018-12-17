@@ -1,14 +1,16 @@
 package ex2
 
+import ex2.creatures._
+
 import scala.collection.immutable.ListMap
 import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 
 
-class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var regeneration:Int, var maxHP:Int,
-               var x:Double, var y:Double, var vivant: Boolean = true, var attaques: List[Attaque],val deplacement:Int) extends Serializable {
+class Creature(var nom : String, var equipe:Int, var ac: Int, var hp:Int, var regeneration:Int, var maxHP:Int,
+               var x:Double, var y:Double, var vivant: Boolean = true, var attaques: List[Attaque],var deplacement:Int) extends Serializable {
 
 
-  var listAmis: ListBuffer[Creature]=ListBuffer.empty[Creature]
+  var listAmis: List[Creature] = List.empty[Creature]
   var listEnnemis: List[Creature] = List.empty[Creature]
   var id :Int=0
   var cible:Creature=null
@@ -17,7 +19,8 @@ class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var re
   var isEnVol:Boolean=false
   var isDeguise:Boolean=false
   var attaque:Attaque=null
-
+  var heal = 0
+  var healCible:Creature=null
 
   var numStrategie = 1
 
@@ -27,12 +30,30 @@ class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var re
     this.hp-=degats
   }
 
+  def identifierCibleHeal()={
+    if(heal>0){
+      var continue = true
+      var compteur = 0
+      while(continue){
+        var ami = listAmis(compteur)
+        if(ami.maxHP/ami.hp<0.5){
+          healCible=ami
+          continue=false
+        }
+        compteur+=1
+
+      }
+    }
+  }
+
 
 
   /**
     * Déplace le monstre vers l'ennemi le plus proche
     */
   def seDeplacer(){
+
+
     this.cible=listEnnemis(0) // On se déplace vers le plus proche
     val distanceInitiale = distanceEntre(this.x, this.y, cible.x, cible.y)
     val direction = calculerDirection(this.x, this.y, cible.x, cible.y)
@@ -86,6 +107,13 @@ class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var re
     return 0
   }
 
+  def recevoirHeal(valeur : Int): Unit ={
+    if(this.hp + valeur > maxHP)
+      this.hp=maxHP
+    else
+      this.hp+=valeur
+  }
+
 
   /**
     * Calcule la direction entre deux points
@@ -119,11 +147,47 @@ class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var re
   }
 
   def cloner():Creature={
-    val result = new Creature(this.nom, this.equipe, this.ac, this.hp, this.regeneration, this.maxHP,
-    this.x, this.y, this.vivant, this.attaques,this.deplacement)
+    var result :Creature=null
+    val classe = this.getClass.getSimpleName
+    this match{
+      case creature:AngelSlayer=>
+        result =new AngelSlayer
+      case creature:AstralDeva=>
+        result =new AstralDeva
+      case creature:Dragon=>
+        result =new Dragon
+      case creature:MovanicDeva=>
+        result =new MovanicDeva
+      case creature:OrcBarbarian=>
+        result =new OrcBarbarian
+      case creature:Planetar=>
+        result =new Planetar
+      case creature: Creature=>
+        result=new Creature(this.nom, this.equipe, this.ac, this.hp, this.regeneration, this.maxHP,
+          this.x, this.y, this.vivant, this.attaques,this.deplacement)
+    }
+    result.nom=this.nom
+    result.equipe=this.equipe
+    result.ac=this.ac
+    result.hp=this.hp
+    result.regeneration=this.regeneration
+    result.maxHP=this.maxHP
+    result.x=this.x
+    result.y=this.y
+    result.vivant=this.vivant
+    result.attaques=this.attaques
+    result.deplacement=this.deplacement
+    result.listAmis= this.listAmis
+    result.listEnnemis= this.listEnnemis
+    result.id =this.id
     result.cible=this.cible
-    result.id=this.id
-    result.listEnnemis=this.listEnnemis
+    result.lastAttaque = this.lastAttaque
+    result.nbLastAttaque =this.nbLastAttaque
+    result.isEnVol=this.isEnVol
+    result.isDeguise=this.isDeguise
+    result.attaque=this.attaque
+    result.heal = this.heal
+    result.healCible=this.healCible
     return result
   }
 
@@ -136,4 +200,13 @@ class Creature(val nom : String, val equipe:Int, var ac: Int, var hp:Int, var re
       hp=newHP
     }
   }
+
+  def reset() ={
+    this.listAmis=null
+    this.listEnnemis=null
+    this.cible=null
+    this.attaque=null
+    this.healCible=null
+  }
+
 }

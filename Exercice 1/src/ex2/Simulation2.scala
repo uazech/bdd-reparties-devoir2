@@ -15,7 +15,7 @@ object doSimulation2 extends App {
 
   val conf = new SparkConf()
     .setAppName("Simulation 2")
-    .setMaster("local[*]")
+    .setMaster("local[1]") // 1 car plus rapide
 
 
   val sc = new SparkContext(conf)
@@ -68,11 +68,11 @@ object doSimulation2 extends App {
   arrayCreature+=((10,c))
 
   // Team 2 :
-  c = new Dragon
-  c.isEnVol=false
-  c.isDeguise=true
-  c.id=11
-  arrayCreature+=((11, c))
+  val dragon = new Dragon
+  dragon.isEnVol=false
+  dragon.isDeguise=true
+  dragon.id=11
+  arrayCreature+=((11, dragon))
   for(i<-12 to 22){
     c = new AngelSlayer
     c.id=i
@@ -102,9 +102,15 @@ object doSimulation2 extends App {
   val res = simulation2.execute(myGraph, 200, sc)
 //  solar.x=75
 //  solar.y=75
+////
+//  dragon.x=50
+//  dragon.y=50
 //
-//  c.x=50
-//  c.y=50
+//  dragon.listEnnemis=List(solar)
+//
+//  dragon.seDeplacer()
+//  dragon.seDeplacer()
+//  println(dragon)
 //
 //  solar.listEnnemis+=c
 //  solar.seDeplacer()

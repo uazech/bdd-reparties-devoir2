@@ -25,13 +25,24 @@ class Dragon() extends Creature(
 
 
   @Override override def seDeplacer(): Unit = {
-    if(numStrategie == 1) {
-      this.cible = listEnnemis(0) // On se déplace vers le Solar si il est encore en vie. Sinon, on se déplace vers d'autres créatures
-      listEnnemis.find(cible => cible.nom == "Solar") match {
-        case Some(solar) => this.cible = solar
-        case None => this.cible = listEnnemis(0)
-      }
+
+
+
+     // On se déplace vers le Solar s'il est encore en vie, sinon, on attaque les anges
+    listEnnemis.find(
+      cible => cible.nom == "Solar") match {
+      case Some(solar) =>
+        this.cible = solar
+      case None =>
+        this.cible = listEnnemis(0)
+
     }
+    if(this.cible.nom=="Solar" && (Math.abs(this.x)-Math.abs(cible.x)<cible.deplacement) && (Math.abs(this.x)-Math.abs(cible.x)<cible.deplacement)){
+      isDeguise=false
+      isEnVol==true
+      numStrategie=2
+    }
+
 
     val distanceInitiale = distanceEntre(this.x, this.y, cible.x, cible.y)
     val direction = calculerDirection(this.x, this.y, cible.x, cible.y)
@@ -48,11 +59,7 @@ class Dragon() extends Creature(
   }
 
   override def attaqueCible(): Int = {
-    if(cible.nom=="Solar" && this.x==cible.x && this.y==cible.y){
-      isDeguise=false
-      isEnVol==true
-      numStrategie=2
-    }
+
     super.attaqueCible()
 
   }
