@@ -3,7 +3,7 @@ package ex2.creatures
 import ex2.{Attaque, Creature, Util}
 
 class AstralDeva() extends Creature(
-  "Movanic Deva",
+  "Astral Deva",
   1,
   29,
   172,

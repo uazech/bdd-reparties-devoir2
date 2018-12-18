@@ -19,5 +19,5 @@ class MovanicDeva() extends Creature(
 
   ),40){
   this.heal=50
-  this.color=(8,15,0)
+  this.color=(0,43,255)
 }
