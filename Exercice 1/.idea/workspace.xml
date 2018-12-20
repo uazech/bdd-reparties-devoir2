@@ -1,54 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d3f501e-11ae-4ce3-90a7-2c14a3e2593d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_13.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_14.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_15.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_17.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation1/iteration_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation1/iteration_9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_13.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_14.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_15.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_17.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_18.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_19.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_20.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_21.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_22.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_22.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_23.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_23.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_24.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_25.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_25.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_26.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_26.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulation2/iteration_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Simulation2/iteration_9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ex2/DrawImage.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/DrawImage.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ex2/creatures/AstralDeva.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/creatures/AstralDeva.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ex2/creatures/MovanicDeva.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex2/creatures/MovanicDeva.scala" afterDir="false" />
-    </list>
+    <list default="true" id="0d3f501e-11ae-4ce3-90a7-2c14a3e2593d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -239,7 +192,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ex2/DrawImage.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
+            <state relative-caret-position="16">
               <caret line="24" column="79" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
             </state>
           </provider>
@@ -450,7 +403,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545171214434" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545171392698" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -541,18 +494,18 @@
       <workItem from="1544890144567" duration="28154000" />
       <workItem from="1544986683670" duration="774000" />
       <workItem from="1545076530585" duration="796000" />
-      <workItem from="1545082790756" duration="9461000" />
+      <workItem from="1545082790756" duration="9947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91810000" />
+    <option name="totallyTimeSpent" value="92296000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3207262" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3207262" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -561,7 +514,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39836067" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39836067" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -746,24 +699,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ex2/creatures/AstralDeva.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ex2/creatures/BarbaresOrc.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ex2/creatures/MovanicDeva.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -795,9 +734,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/creatures/AstralDeva.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex2/creatures/MovanicDeva.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ex2/DrawImage.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
+        <state relative-caret-position="16">
           <caret line="24" column="79" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
         </state>
       </provider>
